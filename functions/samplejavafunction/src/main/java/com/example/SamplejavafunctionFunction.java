@@ -4,6 +4,8 @@ import com.salesforce.functions.jvm.sdk.Context;
 import com.salesforce.functions.jvm.sdk.InvocationEvent;
 import com.salesforce.functions.jvm.sdk.SalesforceFunction;
 import com.salesforce.functions.jvm.sdk.data.Record;
+import com.salesforce.functions.jvm.sdk.data.RecordWithSubQueryResults;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +30,7 @@ public class SamplejavafunctionFunction implements SalesforceFunction<FunctionIn
   public FunctionOutput apply(InvocationEvent<FunctionInput> event, Context context)
       throws Exception {
 
-    List<Record> records =
+    List<RecordWithSubQueryResults> records =
         context.getOrg().get().getDataApi().query("SELECT Id, Name FROM Account").getRecords();
 
     LOGGER.info("Function successfully queried {} account records!", records.size());
