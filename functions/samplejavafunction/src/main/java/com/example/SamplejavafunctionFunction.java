@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Describe SamplejavafunctionFunction here java v1.
+ * Describe SamplejavafunctionFunction here java v2.
  */
 public class SamplejavafunctionFunction implements SalesforceFunction<FunctionInput, FunctionOutput> {
   private static final Logger LOGGER = LoggerFactory.getLogger(SamplejavafunctionFunction.class);
