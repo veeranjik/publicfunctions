@@ -53,7 +53,7 @@ public class FunctionTest {
         when(secondRecord.getStringField("Id")).thenReturn(Optional.of("6003000000D8cuIQAA"));
         when(secondRecord.getStringField("Name")).thenReturn(Optional.of("Account Two, inc."));
 
-        when(mockResult.getRecords()).thenReturn(Arrays.asList(firstRecord, secondRecord));
+      //  when(mockResult.getRecords()).thenReturn(Arrays.asList(firstRecord, secondRecord));
 
         return mockResult;
       });
